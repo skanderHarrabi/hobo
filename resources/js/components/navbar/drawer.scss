@@ -1,0 +1,114 @@
+@import "../../stylesheets/variables";
+@import "../../stylesheets/mixins";
+@import "../../stylesheets/animations";
+
+.icon-drawer-btn {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+    svg {
+        max-width: 40px;
+        path {
+            @include transition(all, 0.2s, ease-in-out);
+        }
+    }
+}
+.ant-drawer-content {
+    background: $primary-color;
+    color: $white;
+    .ant-drawer-wrapper-body {
+        background: $primary-color;
+        .ant-drawer-header {
+            background: $primary-color;
+            color: $white;
+            border: none;
+            .ant-drawer-title {
+                color: $white;
+                text-transform: uppercase;
+                font-size: 20px;
+            }
+            .ant-drawer-close {
+                color: $white;
+                font-size: 40px;
+                height: 40px;
+                right: 10px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+    }
+    .navbar-menu {
+        @include flexbox();
+        @include flex-direction(column);
+        .navbar-menu-inner {
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(space-between);
+            text-align: left;
+            height: 100%;
+            min-height: calc(100vh - 140px);
+            .left-items {
+                @include flexbox();
+                @include flex-direction(column);
+            }
+            .right-items {
+                @include flexbox();
+                @include flex-direction(column);
+            }
+            .link {
+                margin-top: 10px;
+                text-align: left;
+                font-size: 18px;
+                font-weight: 500;
+                text-transform: capitalize;
+                color: $white;
+
+                &:focus,
+                &:hover {
+                    color: $secondary-color;
+                }
+                &.active {
+                    color: $secondary-color;
+                }
+            }
+            .dropdownuser {
+                margin-top: 20px;
+                margin-left: 0 !important;
+                margin-bottom: 20px;
+            }
+        }
+        .navbar-menu-bottom {
+            @include flexbox();
+            @include flex-direction(column);
+            .link {
+                margin-top: 5px;
+                @include flexbox();
+                @include align-items(center);
+                @include justify-content(flex-start);
+                text-align: left;
+                font-family: "Muli", sans-serif;
+                font-size: 14px;
+                font-weight: 500;
+                text-transform: uppercase;
+                svg {
+                    margin-right: 10px;
+                    width: 20px;
+                }
+                &:focus,
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+    .ant-avatar {
+        background: black;
+        border-radius: 0;
+        border: 2px solid $secondary-color;
+    }
+}

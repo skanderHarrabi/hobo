@@ -1,0 +1,74 @@
+@import "mixins";
+@import "variables";
+@import "overides";
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  font-size: 10px;
+  --primary-color: #04357c;
+}
+@font-face {
+  font-family: "sst";
+  src: url(./SSTArabic-Bold.woff) format("woff"),
+    url(./SSTArabic-Bold.woff2) format("woff2"),
+    url(./SSTArabic-Bold.ttf) format("truetype");
+  font-weight: 700;
+}
+
+body {
+  --yellow-dark: #e99733;
+  --yellow-soft: #f0b354;
+  font-family: "sst", sans-serif;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  //background: #b91c1e url(../img/background-mobile.jpg) center center;
+  background-image: url(../img/background.jpg);
+
+  background-size: cover;
+  @media (min-width: 992px) {
+    background-image: url(../img/background.jpg);
+  }
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.app {
+  height: 100%;
+  margin: auto;
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+  @media (min-width: 1400px) {
+    max-width: 1440px;
+  }
+}
+
+.loading-screen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p,
+button {
+  direction: rtl;
+}

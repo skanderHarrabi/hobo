@@ -1,0 +1,150 @@
+@import "../../stylesheets/variables";
+@import "../../stylesheets/mixins";
+
+.signup-form {
+  padding: 20px !important;
+  position: relative;
+  z-index: 99;
+  height: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  @media (min-width: 992px) {
+    padding: 0 !important;
+  }
+  #naming-logo {
+    width: 50%;
+    margin-bottom: 20px;
+    @media (min-width: 992px) {
+      margin-bottom: 40px;
+      width: 100%;
+    }
+  }
+  .row-one {
+    width: 100%;
+    max-width: 760px;
+    @include flexbox();
+    @include flex-direction(column);
+    @media (min-width: 992px) {
+      @include flex-direction(row);
+    }
+    .ant-form-item {
+      @include flex(1);
+      @media (min-width: 992px) {
+        margin-right: 40px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    .ant-input:focus {
+      border-color: #d86211 !important;
+    }
+
+    &:nth-child(2) {
+      margin-bottom: 15px;
+      @media (min-width: 992px) {
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  .submit {
+    margin-top: 20px;
+    button {
+      font-size: 20px;
+      border: 2px solid #fc8218;
+      text-transform: uppercase;
+      @include border-radius(100px);
+      outline: none;
+      cursor: pointer;
+      padding: 20px 40px;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      color: white;
+      height: auto;
+      @include border-radius(40rem);
+      margin: auto !important;
+      box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
+        0 1px 3px rgba(0, 0, 0, 0.08);
+      background-image: linear-gradient(
+        to bottom,
+        rgba(253, 163, 72, 1),
+        rgb(212, 106, 11) 100%,
+        rgba(212, 96, 16, 1) 100%
+      );
+      transition: 0.5s;
+      &:hover {
+        background-position: top center;
+      }
+
+      @media (min-width: 992px) {
+        font-size: 25px;
+        height: 100px;
+        padding: 0 90px;
+      }
+      @media (min-width: 1200px) {
+        font-size: 30px;
+      }
+      @media (min-width: 1400px) {
+        font-size: 39px;
+      }
+    }
+  }
+}
+
+.ant-input-wrapper {
+  .ant-input-group-addon {
+    &:last-child {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: transparent !important;
+      text-align: right;
+      width: 100%;
+      font-size: 1rem !important;
+      color: red;
+    }
+  }
+}
+
+.select-error {
+  margin: 0;
+  line-height: 1rem;
+  font-size: 1rem;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  color: red;
+}
+
+.ant-form-item {
+  .ant-input-group-addon {
+    border: 0;
+    &:first-child {
+      display: none;
+    }
+  }
+
+  .ant-input {
+    text-align: center !important;
+    background: #f8eedf;
+    color: #210401;
+    font-size: 20px;
+    padding: 30px !important;
+    text-transform: uppercase;
+    box-shadow: none !important;
+    @include border-radius(10px !important);
+    @media (min-width: 992px) {
+      font-size: 28px;
+      padding: 40px !important;
+    }
+
+    &::placeholder {
+      color: #210401;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+@import "../../stylesheets/variables";
+@import "../../stylesheets/mixins";
+
+.chatting {
+  .question-wrapper {
+    .question,
+    .answer {
+      direction: rtl;
+      margin: 1px;
+      color: #210401;
+      padding: 10px 30px;
+      background: white;
+      justify-self: end;
+      font-size: 16px;
+      line-height: 16px;
+      @include border-radius(5px);
+      @media (min-width: 992px) {
+        font-size: 25px;
+        line-height: 25px;
+      }
+      @media (min-width: 1200px) {
+        font-size: 30px;
+        line-height: 30px;
+      }
+      @media (min-width: 1400px) {
+        font-size: 35px;
+        line-height: 35px;
+      }
+
+      &.img {
+        background: none;
+        padding: 0;
+
+        img {
+          max-width: 80%;
+          width: 100%;
+        }
+      }
+    }
+
+    .question {
+      margin-left: auto;
+      margin-bottom: 10px;
+      padding: 5px 10px 15px 10px;
+      max-width: 80%;
+      -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.13);
+      -moz-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.13);
+      box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.13);
+    }
+
+    .suggestions {
+      margin-bottom: 10px;
+      @include flexbox();
+      @include flex-wrap(wrap);
+
+      .text {
+        padding: 0 10px 5px;
+        animation: scale 1s infinite;
+        outline: none;
+        margin: 2px 20px 2px 2px;
+        font-size: 16px;
+        background: #d73437;
+        color: white;
+        border: 2px solid #e15c5e;
+        -webkit-box-shadow: 0px 10px 22px -18px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 10px 22px -18px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 10px 22px -18px rgba(0, 0, 0, 0.75);
+        @include transition(all, 0.3s);
+        @include border-radius(10px);
+
+        &:hover {
+          background: #b10d10;
+        }
+
+        @media (min-width: 992px) {
+          font-size: 23px;
+        }
+        @media (min-width: 1200px) {
+          font-size: 25px;
+        }
+        @media (min-width: 1400px) {
+          font-size: 30px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .answers {
+      margin-bottom: 10px;
+      display: grid;
+      grid-gap: 10px;
+    }
+  }
+}
+
+@-webkit-keyframes scale {
+  0% {
+    @include transform(scale(1));
+  }
+  50% {
+    @include transform(scale(1.05));
+  }
+  100% {
+    @include transform(scale(1));
+  }
+}
+
+@-moz-keyframes scale {
+  0% {
+    @include transform(scale(1));
+  }
+  50% {
+    @include transform(scale(1.05));
+  }
+  100% {
+    @include transform(scale(1));
+  }
+}
+
+@keyframes scale {
+  0% {
+    @include transform(scale(1));
+  }
+  50% {
+    @include transform(scale(1.05));
+  }
+  100% {
+    @include transform(scale(1));
+  }
+}

@@ -1,0 +1,52 @@
+.layout-one {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+  .logo {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    #logo {
+      position: absolute;
+      right: 10vw;
+      width: 25vw;
+      bottom: -5vh;
+      height: auto;
+      z-index: 9;
+      @media (min-width: 992px) {
+        width: 27vw;
+        bottom: -18vh;
+      }
+    }
+    &.offset {
+      #logo {
+        @media (min-width: 992px) {
+          width: 22vw;
+          right: 5vw;
+        }
+      }
+    }
+  }
+  .hobo-logo {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    #hobo-logo {
+      width: 20vw;
+      left: 13vw;
+      bottom: 20px;
+      position: absolute;
+      z-index: 9;
+      height: auto;
+      @media (min-width: 992px) {
+        width: 10vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,45 @@
+@import "../../stylesheets/variables";
+@import "../../stylesheets/mixins";
+
+.hobo-button {
+  direction: rtl;
+  outline: none;
+  border: 2px solid #c43539;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: white;
+  font-size: 25px;
+  @include border-radius(40rem);
+  animation: scale 1s infinite;
+  margin: auto;
+  padding: 0 40px 10px;
+  background-size: 200% auto;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  background-image: linear-gradient(
+    to right,
+    #c43539 0%,
+    #891400 50%,
+    #89080a 100%
+  );
+  transition: 0.5s;
+
+  &:hover {
+    background-position: right center;
+  }
+  @media (max-width: 400px) {
+    font-size: 13px;
+  }
+  @media (min-width: 992px) {
+    font-size: 22px;
+  }
+  @media (min-width: 1200px) {
+    font-size: 26px;
+  }
+  @media (min-width: 1400px) {
+    font-size: 30px;
+  }
+}

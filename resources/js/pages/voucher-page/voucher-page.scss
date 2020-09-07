@@ -1,0 +1,135 @@
+@import "../../stylesheets/mixins";
+@import "../../stylesheets/variables";
+
+.voucher-page {
+  height: 100%;
+  width: 100%;
+  @include flexbox();
+  @include flex-direction(column);
+  @include align-items(center);
+  @include justify-content(center);
+  @media (max-width: 991px) {
+    overflow: scroll;
+  }
+  #naming-logo {
+    margin-bottom: 40px;
+    @media (max-width: 991px) {
+      width: 30vw;
+      margin-bottom: 0;
+    }
+  }
+
+  .voucher-page-content {
+    position: relative;
+    padding: 20px;
+    .img {
+      width: 100%;
+      display: block;
+      margin: auto auto 10px;
+      @media (min-width: 992px) {
+        width: 50%;
+      }
+    }
+    .voucher-text {
+      color: white;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 16px;
+      @media (max-width: 400px) {
+        font-size: 15px;
+      }
+      @media (min-width: 992px) {
+        font-size: 25px;
+        line-height: 25px;
+        margin-bottom: 20px;
+      }
+      @media (min-width: 1200px) {
+        font-size: 30px;
+        line-height: 30px;
+      }
+      @media (min-width: 1400px) {
+        font-size: 35px;
+        line-height: 35px;
+      }
+    }
+
+    .submit-button {
+      height: 60px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: 2px solid #fc8218;
+      text-transform: uppercase;
+      background: rgb(253, 163, 72);
+      display: block;
+      margin: auto;
+      background: linear-gradient(
+        180deg,
+        rgba(253, 163, 72, 1) 0%,
+        rgba(212, 96, 16, 1) 100%
+      );
+      @include border-radius(100px);
+      @media (max-width: 768px) {
+        font-size: 13px;
+      }
+      @media (min-width: 992px) {
+        padding: 0 60px 10px;
+        font-size: 34px;
+        height: 100px;
+      }
+    }
+  }
+}
+.img-content {
+  .helper {
+    background: #b81c1d;
+    color: white;
+    text-align: center;
+    direction: rtl;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 10px;
+    @media (min-width: 992px) {
+      margin-bottom: 40px;
+      font-size: 24px;
+    }
+  }
+  .voucher-image {
+    position: relative;
+    width: 100%;
+    img {
+      width: 100%;
+      display: block;
+      margin: auto;
+    }
+    span {
+      position: absolute;
+      color: white;
+      text-transform: uppercase;
+      left: 17%;
+      bottom: 35%;
+      font-size: 12px;
+      @media (min-width: 992px) {
+        font-size: 30px;
+      }
+    }
+    .code {
+      position: absolute;
+      left: 10px;
+      bottom: 10px;
+      font-size: 10px;
+      @media (min-width: 992px) {
+        font-size: 24px;
+      }
+    }
+  }
+}
+.ReactModal__Content {
+  padding: 0 !important;
+  background: transparent !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.ReactModal__Overlay {
+  z-index: 99;
+}

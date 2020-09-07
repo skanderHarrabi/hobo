@@ -1,0 +1,49 @@
+@import "../../stylesheets/mixins";
+@import "../../stylesheets/variables";
+
+.signup-page {
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+    position: relative;
+    width: 100%;
+
+    .inner {
+        margin: 70px 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 20px;
+        @media (min-width: 992px) {
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 60px;
+        }
+
+        .form-section {
+            @include flexbox();
+            @include flex-direction(column);
+            @include justify-content(center);
+
+            .title {
+                font-size: 38px;
+                color: $primary-color;
+                @media (min-width: 992px) {
+                    font-size: 60px;
+                }
+                .highlight {
+                    color: $secondary-color;
+                }
+            }
+        }
+
+        .image-section {
+            position: relative;
+
+            svg {
+                width: 80%;
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+}

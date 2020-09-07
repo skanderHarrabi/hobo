@@ -1,0 +1,34 @@
+.fixed-elements {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  @media (min-width: 992px) {
+    display: block;
+  }
+  .heart1,
+  .heart2 {
+    position: absolute;
+    width: 18vw;
+    max-width: 200px;
+    left: 15vw;
+    bottom: 32vh;
+    &.flipped {
+      right: 22vh;
+      left: unset;
+    }
+  }
+  .heart2 {
+    max-width: 160px;
+    top: 20vh;
+    bottom: unset;
+    left: unset;
+    right: 15vw;
+    &.flipped {
+      left: 18vh;
+      right: unset;
+    }
+  }
+}

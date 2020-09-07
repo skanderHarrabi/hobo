@@ -1,0 +1,22 @@
+@import "../../stylesheets/variables";
+@import "../../stylesheets/mixins";
+.signin-form {
+  @include flexbox();
+  @include flex-direction(column);
+  width: 100%;
+  max-width: 725px;
+  margin: auto;
+  .submit-button {
+    margin: auto;
+    display: block;
+  }
+  .title {
+    font-size: 1.4rem;
+    margin-bottom: 50px;
+  }
+  .auth-error {
+    padding-bottom: 2rem;
+    color: red;
+    text-align: center;
+  }
+}
